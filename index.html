@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Changer</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      transition: background-color 0.5s ease;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #grey {
+      background-color: grey;
+      color: white;
+    }
+
+    #white {
+      background-color: white;
+      color: black;
+    }
+
+    #blue {
+      background-color: blue;
+      color: white;
+    }
+
+    #yellow {
+      background-color: yellow;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Background Changer</h1>
+
+  <button class="button" id="grey">Grey</button>
+  <button class="button" id="white">White</button>
+  <button class="button" id="blue">Blue</button>
+  <button class="button" id="yellow">Yellow</button>
+
+  <script>
+    const buttons = document.querySelectorAll('.button');
+    const body = document.querySelector('body');
+
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function (e) {
+        body.style.backgroundColor = e.target.id;
+      });
+    });
+  </script>
+
+</body>
+</html>
